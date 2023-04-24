@@ -101,6 +101,15 @@ return packer.startup(function(use)
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
+	-- terminal
+	use({
+		"s1n7ax/nvim-terminal",
+		config = function()
+			vim.o.hidden = true
+			require("nvim-terminal").setup()
+		end,
+	})
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
