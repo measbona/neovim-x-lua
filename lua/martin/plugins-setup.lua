@@ -102,13 +102,7 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
 	-- terminal
-	use({
-		"s1n7ax/nvim-terminal",
-		config = function()
-			vim.o.hidden = true
-			require("nvim-terminal").setup()
-		end,
-	})
+	use("voldikss/vim-floaterm")
 
 	if packer_bootstrap then
 		require("packer").sync()
